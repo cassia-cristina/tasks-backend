@@ -55,7 +55,7 @@ pipeline {
             steps {
                 dir('function-test') {
                     git 'https://github.com/cassia-cristina/tasks-functional-test.git'
-                    bat 'mvn test'
+                    bat 'mvn test -Dheadless=true'
                 }
             }
         }
