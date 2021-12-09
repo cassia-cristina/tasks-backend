@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage ('Just Test') {
+        stage ('Build Backend') {
             steps {
-                bat 'echo teste pipeline'
+                bat 'mvn clean package -DskipTests=true'
             }
 
         }
